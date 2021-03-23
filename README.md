@@ -14,7 +14,7 @@
 > \**Second option*\*\
 > \**Third option*\*\
 > \**Your Name, UČO, Date, Time*\*\
-> 2.
+> 2.\
 > \**Header of the second question*\*\
 > .\
 > .\
