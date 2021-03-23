@@ -3642,7 +3642,7 @@
     ]
   },
   {
-    "name": "_____ owing Jack \u014120, I've still got to pay my car insurance for last month.",
+    "name": "_____ owing Jack Ł20, I've still got to pay my car insurance for last month.",
     "answers": [
       {
         "body": "Moreover",
@@ -5677,7 +5677,7 @@
     ]
   },
   {
-    "name": "Frank _____ that all club members should pay \u01415 towards the costs of the new boathouse.",
+    "name": "Frank _____ that all club members should pay Ł5 towards the costs of the new boathouse.",
     "answers": [
       {
         "body": "invited",

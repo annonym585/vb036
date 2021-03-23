@@ -11,12 +11,12 @@ def find_in_results(question: str, filename: str) -> str:
         for line in results:
             if question in line:
                 answer_found = True
-            if answer_found:
+            elif answer_found:
                 if "\"" in line:
                     my_split = line.split("\"")
                     if len(my_split) >= 4:
                         last = my_split[3]
-                if "true" in line:
+                if "true" in line and "right" in line:
                     return last
         return "error"
 
@@ -26,11 +26,17 @@ def anj_solver(results: str, file: str) -> None:
     with open(file, "r") as my_file:
         for line in my_file:
             if not next_is_copy and line[:-2].isnumeric():
-                print(line[:-1], end="")
+                print(line[:-1], end=" ")
+                if int(line[:-2]) < 10:
+                    print(" ", end="")
                 next_is_copy = True
             elif next_is_copy:
                 next_is_copy = False
-                print(find_in_results(line[:-1], results))
+                if "\"" in line:
+                    my_split = line.split("\"")
+                    print(find_in_results(my_split[1], results))
+                else:
+                    print(find_in_results(line[:-1], results))
 
 
 def main() -> None:
